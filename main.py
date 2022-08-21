@@ -2,13 +2,13 @@ from operations import arithmetic
 
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print(f'Hi, {name}')
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
     print_hi("You")
-    arithmetic.Arithmetic.sum(2.5, 3)
-    arithmetic.Arithmetic.subtraction(3, 2.5)
+    arithmetic.addition(3, 4)
+    arithmetic.subtraction(3, 4)
+    arithmetic.multiplication(3, 4)
+    arithmetic.division(3, 4)
