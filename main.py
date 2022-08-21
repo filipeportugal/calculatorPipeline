@@ -1,7 +1,4 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from operations import arithmetic
 
 
 def print_hi(name):
@@ -13,5 +10,5 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print_hi("You")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    arithmetic.Arithmetic.sum(2.5, 3)
+    arithmetic.Arithmetic.subtraction(3, 2.5)
