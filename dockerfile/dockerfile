@@ -1,0 +1,18 @@
+FROM python:3.10
+
+WORKDIR home/
+#COPY ./ ./
+#COPY /integration/arithmetic_test.py ./
+#COPY /dockerfile/requirements.txt ./
+RUN echo "Updating dependencies"
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+RUN git clone https://github.com/filipeportugal/calculatorPipeline.git
+ADD ./ ./
+CMD ["rm", "dockerfile_*"]
+RUN echo "Extra dockerfiles deleted"
+
+RUN python main.py
+#RUN pytest arithmetic_test.py
+
