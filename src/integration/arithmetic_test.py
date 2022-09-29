@@ -1,4 +1,5 @@
-from operations import arithmetic
+import pytest
+from src.operations import arithmetic
 
 
 def test_sum_1(first=3, second=5, expected=8):
