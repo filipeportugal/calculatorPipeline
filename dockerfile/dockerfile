@@ -1,18 +1,12 @@
-FROM alpine
-
 RUN apk update
 RUN apk add git
-
-RUN apk add --no-cache python3 py3-pip
-
-RUN apk add tree
+RUN apk add openssh
 RUN apk update
 
-COPY . /calculatorPipeline
-WORKDIR ./calculatorPipeline/
-RUN pip install -r dockerfile/requirements.txt
+RUN git clone https://github.com/filipeportugal/calculatorPipeline.git
+WORKDIR calculatorPipeline/dockerfile
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+WORKDIR /calculatorPipeline
 ENV PYTHONPATH /calculatorPipeline
-
-RUN pytest src/integration/arithmetic_test.py
-
-RUN echo "All fine here!"

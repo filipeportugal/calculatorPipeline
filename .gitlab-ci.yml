@@ -1,0 +1,6 @@
+run_tests:
+  image: python:3-alpine3.16
+  before_script:
+    - apt-get update && apt-get install make
+  script:
+    - make test
